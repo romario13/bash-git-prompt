@@ -1,4 +1,4 @@
-# Informative git prompt for bash
+# Informative git prompt for bash (set PROMPT_COMMAND in /etc/bash.bashrc)
 
 This prompt is a port of the "Informative git prompt for zsh" which you can find [here](https://github.com/olivierverdier/zsh-git-prompt)
 
@@ -39,11 +39,11 @@ The symbols are as follows:
 - Branch Symbol:<br />
   	When the branch name starts with a colon ``:``, it means it's actually a hash, not a branch (although it should be pretty clear, unless you name your branches like hashes :-)
 
-## Install
+## Install (adopted to Linux Mint 14)
 
 1. Create the directory ``~/.bash`` if it does not exist (this location is customizable).
-1. Move the file ``gitstatus.py`` into ``~/.bash/``.
-1. Source the file ``gitprompt.sh`` from your ``~/.bashrc`` config file, and, configure your prompt in ``~/.bash/gitprompt.sh``. For this you have to set the variables PROMPT\_START and PROMPT\_END.
+1. Move the files ``gitprompt.sh`` and ``gitstatus.py`` into ``~/.bash/``.
+1. Use ``bash.bashrc`` instead of original ``/etc/bash.bashrc`` (make a backup!) or use it as example of PROMPT_COMMAND usage instead of SP1 value. 
 1. You may also redefine the function ``setGitPrompt`` to adapt it to your needs (to change the order in which the information is displayed).
 1. Go in a git repository and test it!
 

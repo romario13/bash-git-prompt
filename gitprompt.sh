@@ -85,10 +85,12 @@ function setGitPrompt() {
 	  fi
 	  STATUS="$STATUS$ResetColor$GIT_PROMPT_SUFFIX"
 
-	  PS1="$PROMPT_START$STATUS$PROMPT_END"
+	  PS1_GIT="$ResetColor$STATUS"
 	else
-	  PS1="$PROMPT_START$PROMPT_END"
+	  PS1_GIT=""
 	fi
+	
+	echo "$PS1_GIT"
 }
 
-PROMPT_COMMAND=setGitPrompt
+#PROMPT_COMMAND=setGitPrompt
