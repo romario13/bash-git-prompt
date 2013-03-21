@@ -6,7 +6,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-source /home/romario/.bash/gitprompt.sh
+source ~/.bash/gitprompt.sh
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
