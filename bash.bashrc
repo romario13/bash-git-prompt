@@ -44,12 +44,12 @@ if ${use_color} ; then
         fi
 
         if [[ ${EUID} == 0 ]] ; then
-echo "1"
 #                PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
-PROMPT_COMMAND='PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[01;34m\] \W$(setGitPrompt) \$\[\033[00m\] "'
+PROMPT_COMMAND='PS1="\n\[\033[01;31m\]\w\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h$(setGitPrompt)\$\[\033[00m\] "'
         else
 #                PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
-PROMPT_COMMAND='PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w$(setGitPrompt) \$\[\033[00m\] "'
+#PROMPT_COMMAND='PS1="\n\[\033[01;34m\]\w\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h$(setGitPrompt)\$\[\033[00m\] "'
+PROMPT_COMMAND='PS1="\n\[\033[01;33m\]\w\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h$(setGitPrompt)\$\[\033[00m\] "'
         fi
 
         alias ls='ls --color=auto'
